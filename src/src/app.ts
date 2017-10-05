@@ -26,8 +26,7 @@ function findNext(days: { [datum: string]: Day }) {
 function catchMeOutSide(data: DrygDagarResponse) {
 	debug('got some data from dryg', data)
 
-	const headLine = document.getElementById('ted')
-	const subLine = document.getElementById('pontus')
+	const [headLine, subLine] = Array.from(document.querySelectorAll('article div'))
 
 	const tomorrowFormatted = moment()
 		.add(1, 'day')

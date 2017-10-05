@@ -256,7 +256,7 @@ module.exports = {
 			PACKAGE_NAME: JSON.stringify(pkg.name),
 		}),
 
-		new webpack.BannerPlugin(`ES/OS v${pkg.version} (c) ${new Date().getFullYear()}`),
+		new webpack.BannerPlugin(`BMBSQD/OS v${pkg.version} (c) ${new Date().getFullYear()}`),
 
 		// new webpack.optimize.CommonsChunkPlugin({
 		// 	name: ['kernel'],

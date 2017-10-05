@@ -13,106 +13,68 @@ html {
 	padding: 0;
 }
 
-.fullscreen {
-	width: 100%;
-	min-height: 100%;
-	overflow: hidden;
-}
-
-.fullscreen.not-overflow,
-.not-fullscreen {
-	height: 100%;
-	overflow: hidden;
-}
-
-/* content centering styles */
-.content-a {
-	position: relative;
-	height: 100vh;
-}
-
-.content-b {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-/* background setup */
-.background {
+.background() {
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
 	background-image: url('../images/backgrounds/hello.jpg');
 }
 
-#ted {
-	text-align: left;
-	color: #fff;
-	display: block;
-	/*	text-shadow:
-		#253e45 -1px 1px 0,
-		#253e45 -2px 2px 0,
-		#d45848 -3px 3px 0,
-		#d45848 -4px 4px 0; */
-	font-family: brandon-grotesque, sans-serif;
-	font-size: 74px;
-	font-style: normal;
-	font-weight: 300;
-	line-height: 100%;
-	margin: 0 auto;
-	text-transform: uppercase;
-	max-width: 80%;
+body {
+	.background();
 }
 
-#head,
-#pontus {
-	text-align: left;
-	color: #fff;
-	display: block;
-	margin: 0 auto;
-	text-transform: uppercase;
-	max-width: 80%;
+article {
+	position: relative;
+	height: 100vh;
 }
 
-.footer {
-	background-color: transparent;
-	text-align: center;
+main {
 	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	margin: 0 auto;
+
+	text-transform: uppercase;
+	max-width: 75vw;
+	font-style: normal;
+	
+	div:first-of-type {
+		font-size: 5vw;
+		font-weight: 300;
+	}
+}
+
+/* background setup */
+
+footer {
+	background-color: transparent;
+	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	padding: 10px 0;
-}
+	font-size: 11px;
 
-.footer .cont {
-	padding: 5px 0;
+	padding: 1em;
 	margin: 0 auto;
-	max-width: 80%;
 	text-align: left;
 	color: #ffffff;
 	text-transform: uppercase;
-	position: relative;
-}
 
-.footer .cont .head {
-	font-size: 11px;
-	font-weight: 700;
-	display: block;
-	margin-bottom: 5px;
-}
+	div {
+		font-size: 11px;
+		font-weight: 700;
+		display: block;
+		margin-bottom: 5px;
+	}
 
-.footer .cont .notHead {
-	font-size: 11px;
-	font-weight: 700;
-	display: block;
-	margin-bottom: 5px;
-}
-
-.footer img {
-	width: 22px;
-	height: 22px;
-	margin-left: 3px;
+	img {
+		width: 22px;
+		height: 22px;
+		margin-left: 3px;
+	}
 }
 
 a {
