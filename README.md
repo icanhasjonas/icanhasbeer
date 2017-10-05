@@ -16,5 +16,5 @@ This is a simple site to check if today is a beer day (trick question, every day
    * Deploy with invalidation
 
 ### Credits
-Original Site by Madsen
-Webpack2, and all that shit by Jonas
+Original Site by Madsen,
+Webpack2 and all that shit by Jonas
