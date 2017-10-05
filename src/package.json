@@ -1,0 +1,121 @@
+{
+  "name": "icanhasbeer",
+  "version": "1.0.0",
+  "description": "icanhasbeer",
+  "main": "dist/index.html",
+  "scripts": {
+    "dev": "webpack-dev-server --hot --inline --progress --devtool cheap-eval-source-map",
+    "build": "webpack --progress",
+    "dist": "webpack -p --progress",
+    "dist-source-map": "webpack -p --progress --devtool source-map",
+    "prod": "npm run dist",
+    "clean": "rimraf ./dist/*",
+    "deploy": "gulp publish",
+    "publish": "npm run clean && npm run dist && npm run deploy"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "BMBSQD",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/icanhasjonas/icanhasbeer"
+  },
+  "homepage": "https://github.com/icanhasjonas/icanhasbeer#readme",
+  "deploy": {
+    "aws": {
+      "profile": "default",
+      "s3": {
+        "bucket": "site.icanhasbeer.com",
+        "region": "us-east-1"
+      },
+      "cloudfront": {
+        "distributionId": "E18PUJAGF0GPDU"
+      }
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 4,
+    "useTabs": true,
+    "printWidth": 120,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.json",
+        "options": {
+          "printWidth": 240,
+          "useTabs": false,
+          "tabWidth": 2,
+          "trailingComma": "none",
+          "parser": "json"
+        }
+      },
+      {
+        "files": "package.json",
+        "options": {
+          "tabWidth": 2
+        }
+      }
+    ]
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.5.1",
+    "debug": "^3.1.0",
+    "moment": "^2.18.1",
+    "tslib": "^1.7.1",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^3.3.36",
+    "@types/debug": "^0.0.30",
+    "@types/jquery": "^3.2.12",
+    "autoprefixer": "^7.1.4",
+    "aws-sdk": "^2.125.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "concurrent-transform": "^1.0.0",
+    "copy-webpack-plugin": "^4.1.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "favicons-webpack-plugin": "0.0.7",
+    "file-loader": "^1.1.4",
+    "gulp": "^3.9.1",
+    "gulp-awspublish": "^3.3.0",
+    "gulp-if": "^2.0.2",
+    "gulp-match": "^1.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.8",
+    "html-loader": "^0.5.1",
+    "html-webpack-inline-source-plugin": "^0.0.9",
+    "html-webpack-plugin": "^2.30.1",
+    "image-webpack-loader": "^3.4.2",
+    "inline-chunk-manifest-html-webpack-plugin": "^1.1.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "node-sass": "^4.5.3",
+    "postcss-convert-values": "^2.6.1",
+    "postcss-font-magician": "^2.1.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-reduce-transforms": "^1.0.4",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6",
+    "script-ext-html-webpack-plugin": "^1.8.5",
+    "style-loader": "^0.19.0",
+    "through2": "^2.0.3",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.3",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.6.0",
+    "webpack-chunk-hash": "^0.4.0",
+    "webpack-delete-after-emit": "^1.0.5",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-subresource-integrity": "^1.0.1",
+    "webpack2-polyfill-plugin": "^0.0.2",
+    "yargs": "^9.0.1"
+  }
+}

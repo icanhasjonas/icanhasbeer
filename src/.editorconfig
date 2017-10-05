@@ -1,0 +1,11 @@
+[package.json]
+indent_style = space
+indent_size = 4
+
+[*.{ts,js}]
+indent_style = tab
+indent_size = 4
+
+[*.{css,less}]
+indent_style = tab
+indent_size = 4

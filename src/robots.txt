@@ -1,0 +1,27 @@
+#      ___ ___  ____ ___  _____      _____    _______   
+#     /   |   \|    |   \/     \    /  _  \   \      \  
+#    /    ~    \    |   /  \ /  \  /  /_\  \  /   |   \ 
+#    \    Y    /    |  /    Y    \/    |    \/    |    \
+#     \___|_  /|______/\____|__  /\____|__  /\____|__  /
+#           \/                 \/         \/         \/ 
+#                                               ROBOT   
+
+User-agent: *
+Disallow: /etc/passwd
+Disallow: /.secrets
+Allow: /acknowledgement/yes
+Disllow: /acknowledgement/affirmative
+Allow: /dance/robot
+Allow: /dance/boogie
+Disallow: /robot/bender/shiny/metal/*
+
+
+User-agent: zombie
+Disallow: /humans.txt
+Disallow: /brains.txt
+
+User-agent: bender
+Disallow: /shiy/metal/*
+
+User-agent: charlie
+Disallow: /finger/*

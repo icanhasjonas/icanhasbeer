@@ -1,0 +1,45 @@
+// Place your settings in this file to overwrite the default settings
+{
+	"typescript.tsdk": "./node_modules/typescript/lib",
+
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.renderWhitespace": "boundary",
+
+	"files.exclude": {
+		".publish-cache": true,
+		"**/*.js": {"when": "$(basename).ts"},
+		"**/*.css": {"when": "$(basename).less"},
+		"**/._*": true,
+		"dist/": true,
+		"build/": true,
+		"node_modules/": true
+	},
+
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/build": true,
+		"**/dist": true
+	},
+
+	"less.lint.zeroUnits": "warning",
+	"less.lint.duplicateProperties": "warning",
+	"less.lint.idSelector": "warning",
+
+	"sfmt.insize": 1,
+	"sfmt.inchar": "\t",
+
+    "prettier.useTabs": true,
+    // Fit code within this line limit
+    "prettier.printWidth": 120,
+
+    // Number of spaces it should use per tab
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    "prettier.trailingComma": "es5",
+    "prettier.singleQuote": true,
+    "prettier.parser": "typescript",
+
+	"vsicons.presets.angular": false
+}

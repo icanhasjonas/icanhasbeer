@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "target": "es2016",
+    "module": "es2015",
+    "lib": ["dom", "es2015", "es2016"],
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "importHelpers": true,
+    "pretty": true
+  },
+  "exclude": ["node_modules", "dist"]
+}
