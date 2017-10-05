@@ -1,35 +1,11 @@
-import { Logger, enable } from './logger'
+import { Logger } from './logger'
 import moment from 'moment'
 
 // import '../css/site.less'
 
 const debug = Logger('app:main')
 
-// global debug
-window['beer'] = {
-	build: { version: BUILD_VERSION },
-	debug: {
-		enable() {
-			enable('app:*')
-		},
-	},
-}
-
 const datumFormat = 'YYYY-MM-DD'
-
-type YesNo = 'Ja' | 'Nej'
-interface Day {
-	'arbetsfri dag': YesNo
-	datum: string
-	helgdag: string
-	veckodag: string
-	'röd day': YesNo
-	namnsdag: string[]
-}
-
-interface Response {
-	dagar: { [datum: string]: Day }
-}
 
 function isArbetsfri(x: Day) {
 	return x['arbetsfri dag'] === 'Ja'
@@ -47,7 +23,7 @@ function findNext(days: { [datum: string]: Day }) {
 	}
 }
 
-function catchMeOutSide(data: Response) {
+function catchMeOutSide(data: DrygDagarResponse) {
 	debug('got some data from dryg', data)
 
 	const headLine = document.getElementById('ted')

@@ -115,7 +115,7 @@ module.exports = {
 			'/dagar/': {
 				secure: false,
 				changeOrigin: true,
-				target: 'https://api.dryg.net:443'
+				target: 'https://api.dryg.net:443',
 			},
 		},
 	},
@@ -253,6 +253,7 @@ module.exports = {
 	plugins: [
 		new webpack.DefinePlugin({
 			BUILD_VERSION: JSON.stringify(pkg.version),
+			PACKAGE_NAME: JSON.stringify(pkg.name),
 		}),
 
 		new webpack.BannerPlugin(`ES/OS v${pkg.version} (c) ${new Date().getFullYear()}`),
