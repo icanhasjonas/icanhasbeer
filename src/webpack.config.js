@@ -48,7 +48,7 @@ const postcssLoader = {
 	loader: 'postcss-loader',
 	options: {
 		plugins: function() {
-			return [require('autoprefixer')]
+			return [require('autoprefixer'), require('postcss-font-magician')]
 		},
 	},
 }
