@@ -89,7 +89,7 @@ module.exports = {
 
 	entry: {
 		main: 'main',
-		kernel: ['babel-polyfill', 'whatwg-fetch', 'tslib'],
+		//kernel: ['babel-polyfill', 'whatwg-fetch', 'tslib'],
 	},
 
 	output: {
@@ -257,11 +257,11 @@ module.exports = {
 
 		new webpack.BannerPlugin(`ES/OS v${pkg.version} (c) ${new Date().getFullYear()}`),
 
-		new webpack.optimize.CommonsChunkPlugin({
-			name: ['kernel'],
-			minChunks: Infinity,
-			//children: true,
-		}),
+		// new webpack.optimize.CommonsChunkPlugin({
+		// 	name: ['kernel'],
+		// 	minChunks: Infinity,
+		// 	//children: true,
+		// }),
 
 		/* no moment localization */
 		new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
@@ -294,7 +294,7 @@ module.exports = {
 			: noop,
 
 		new ScriptExtHtmlWebpackPlugin({
-			sync: [/_loader\.js$/, /kernel\.js$/],
+			sync: [/_loader\.js$/, /kernel\.([a-z0-9]+\.)js$/],
 			defaultAttribute: 'async',
 		}),
 
