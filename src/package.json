@@ -13,11 +13,14 @@
     "deploy": "gulp publish",
     "publish": "npm run clean && npm run dist && npm run deploy"
   },
-  "keywords": [
-    "webpack"
-  ],
-  "author": "BMBSQD",
-  "license": "UNLICENSED",
+  "keywords": ["webpack"],
+  "author": {
+    "name": "Jonas Frost",
+    "email": "jonas+spam@bmbsqd.com",
+    "url": "https://github.com/icanhasjonas"
+  },
+  "contributors": [{ "name": "Pontus Madsen", "email": "madsen@bigsouth.sshhhhh" }, { "name": "Ted" }],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/icanhasjonas/icanhasbeer"
   },
