@@ -1,6 +1,6 @@
 ### INSTALL
 ```bash
-npm install
+npm i
 ```
 
 ### DEV
@@ -10,6 +10,6 @@ npm run dev
 
 ### DIST
 ```bash
-rm -rf ./dist/* && npm run dist
+npm run publish
 ```
 
