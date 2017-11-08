@@ -1,8 +1,8 @@
 # I CAN HAS BEER?
-This is a simple site to check if today is a beer day (trick question, every day is!)
+This is a simple site (I made for Mr Madsen) to check if today is a beer day (trick question, every day is!)
 
 ## Some stuffs
- * Webpack 2
+ * Webpack 3
  * Local dev (with support for api proxy)
  * Auto reload on save and all that jazz (thanks webpack)
  * Optimized build
@@ -16,5 +16,5 @@ This is a simple site to check if today is a beer day (trick question, every day
    * Deploy with invalidation
 
 ### Credits
-Original Site by Madsen,
-Webpack2 and all that shit by Jonas
+Original by Madsen,
+
